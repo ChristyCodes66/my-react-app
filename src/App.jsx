@@ -7,6 +7,7 @@ const items = ['Apples', 'Bananas', 'Cherries'];
 
 function App() {
   const [count, setCount] = useState(0);
+  const [show, setShow] = useState(true);
 
   return (
     <>
@@ -29,8 +30,14 @@ function App() {
           ))}
         </ul>
       </div>
+      <div>
+        <button onClick={() => setShow(!show)}>
+          {show ? "Hide" : "Show"} Message
+        </button>
+        {show && <p>This is a secret message!</p>}
+      </div>
     </>
-  )
+  );
 }
 
 export default App
