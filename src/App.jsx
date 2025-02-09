@@ -22,6 +22,13 @@ function App() {
         <MyButton label='Press Me'/>
         <MyButton label={'Don\'t press me'} />
       </div>
+      <div>
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
