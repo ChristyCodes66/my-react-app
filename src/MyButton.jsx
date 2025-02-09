@@ -1,8 +1,8 @@
-function MyButton() {
+function MyButton({label}) {
     function handleClick() {
         alert('Button was clicked!');
     }
-    return <button onClick={handleClick}>Click Me</button>;
+    return <button onClick={handleClick}>{label}</button>;
 }
 
 export default MyButton
